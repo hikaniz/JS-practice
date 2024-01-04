@@ -1,0 +1,723 @@
+<html>
+<head>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body onload="MyEvent('load')">
+
+   <!-- <h1 id="Myid"></h1> -->
+
+   <!-- h1 class="Myclass"></h1>
+   <h3 class="Myclass"></h3>
+   <button class="Myclass"></button>
+
+    -->
+ <!--   <h1 class="Myname"></h1>
+   <h3 class="Myname"></h3>
+   <button class="Myname"></button>
+
+ -->
+
+
+
+
+   <!-- <button onclick="ObjClose()">click</button> -->
+
+
+ <!--   <button onclick="MyEvent('CLICK')">click</button>
+   <button onmouseover="MyEvent('Mouse Over')">Mouse Hover</button>
+   <button onmouseout="MyEvent('Mouse Out')">Mouse Out</button><br>
+
+   <input onchange="MyEvent('Changed')"/><br>
+   <input onkeydown="MyEvent('Down')"/><br>
+   <input onkeyup="MyEvent('up')"/><br>
+ -->
+
+
+     <!--  <p>1</p>
+      <p>2</p>
+      <p>3</p>
+      <p>4</p>
+      <p>5</p>
+      <button onclick="Demo()">Click</button>
+
+      <input id="num1"/><br>
+      <input id="num2"/><br>
+      <button onclick="AddTwo()">Add</button>
+
+      <h1 id="MyId">Hellow World</h1>
+      <button onclick="AddStyle()">Add</button>
+      <button onclick="RemoveStyle()">Remove</button> -->
+
+
+      <ul id="MyItems"></ul>
+      <input id="MyInput"/>
+      <button onclick="AddItem()">Add</button>
+
+      <img id="MyImg"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6gUrz085xi2mtDp2Q1iB-947BZ0R5_EQuwHOs5h-aNA&s"
+       height=""
+       width=""/>
+
+       <button onclick="ChangeAttr()">Change</button>
+
+
+       <h1 id="MyId">H1</h1>
+       <h6 class="MyClass">H6</h6>
+       <p name="MyName">P tAG</p>
+       <h3>Element</h3>
+       <button onclick="FindElement()">Change</button>
+
+
+       <button onclick="getMyData()">Get Data</button>
+       <h1 id="status">S</h1>
+
+    <script>
+
+       /*  var MyElement= document.getElementById('Myid');
+        MyElement.innerHTML="This H1 Tag (Manupulated)"; */
+
+       /*  var MyElements= document.getElementsByClassName('Myclass');
+        MyElements[1].innerHTML="This Is Mnupulated";  */
+
+/* 
+        var MyElements= document.getElementsByName('Myname');
+        MyElements[2].innerHTML="This Is Mnupulated";
+ */
+       /*   function Demo(){
+           var info= document.cookie;
+           document.getElementsByTagName('p')[0].innerHTML=info;
+         }
+
+         function Demo(){
+             var info=document.domain;
+             document.getElementsByTagName('p')[0].innerHTML=info;
+         }
+
+
+         function Demo(){
+             var info=document.lastModified;
+             document.getElementsByTagName('p')[0].innerHTML=info;
+         }
+         
+         function Demo(){
+             var info=document.title;
+             document.getElementsByTagName('p')[0].innerHTML=info;
+         } */
+
+          
+        /*  function Demo(){
+             var info=document.URL;
+             document.getElementsByTagName('p')[0].innerHTML=info;
+         }
+
+         function Demo(){
+             document.open('text/html','replace');
+             document.write("<h2>Hafsa</h2>");
+             document.close();
+         }
+
+         
+         function Demo(){
+             var w=window.open();
+             w.document.open();
+             w.document.write('New Window');
+             w.document.close();
+         }
+
+         function Demo(){
+            var MyElements=document.getElementsByTagName('p');
+            var ElementsCount=MyElements.length;
+            alert(ElementsCount);
+         }
+
+
+         function AddTwo(){
+            var num1=document.getElementById('num1').value;
+            var num2=document.getElementById('num2').value;
+            var result=parseFloat(num1)+parseFloat(num2);
+            alert(result)
+         }
+
+         function AddStyle(){
+            let H1Tag=document.getElementById("MyId");
+            H1Tag.classList.add("text-primary")
+
+         }
+
+         function RemoveStyle(){
+            let H1Tag=document.getElementById("MyId")
+            H1Tag.classList.remove("text-primary")
+
+         } */
+
+
+
+        function AddItem(){
+          var ItemValue=document.getElementById("MyInput").value;
+          var ListItems=document.createElement("li");
+          ListItems.innerHTML=ItemValue;
+
+          var MyItems=document.getElementById("MyItems");
+          MyItems.appendChild(ListItems);
+
+        }
+
+
+        function ChangeAttr(){
+          var MyImg=document.getElementById("MyImg");
+          MyImg.src=""
+          MyImg.height="300"
+          MyImg.width="300"
+        }
+
+         function FindElement(){
+            document.querySelector("h3").innerHTML="Manupulated";
+            document.querySelector("#MyId").innerHTML="Manupulated";
+            document.querySelector(".MyClass").innerHTML="Manupulated";
+            document.querySelector("p[name='MyName']").innerHTML="Manupulated";
+         }
+
+
+
+         //AJAX DOESNOT PRACTICE
+
+
+
+          
+          
+
+
+
+        //document.write("Hellow Javascript")
+        /*document.write("Hellow Javascript")
+        document.write("Hellow Javascript")
+        document.write("Hellow Javascript")*/
+
+        /*var x=5;
+        var y=10;
+        var z=(x+y);
+        document.write(z);
+
+        var A={
+            name:"Hafsa",
+            age:25,
+            city:"Sylhet",
+
+        }
+        document.write(A.city);
+
+
+         var A=[10,20,30]
+         document.write(A);
+
+         var number=50;
+         var name="Hafsa";
+         if(number>=80 && name=="Hafsa"){
+            document.write('pass');
+         }
+         else if(number<80){
+            document.write('avarage');
+
+         }
+         else if(number<=70){
+            document.write('well');
+         }
+         else{
+            document.write('do better');
+         }*/
+
+
+
+         /* var Marks=30;
+         
+         switch(true){
+
+            case(Marks<=100 && Marks>=80):
+            document.write("A+");
+            break;
+
+            case(Marks<80 && Marks>=70):
+                document.write("A-");
+            break;
+
+            case(Marks<70 && Marks>=60):
+                document.write("B");
+            break;
+            
+            case(Marks<60 && Marks>=50):
+                document.write("C");
+            break;
+
+            case(Marks<50 && Marks>=40):
+                document.write("Fail");
+            break;
+
+            default:
+                document.write("none");
+
+         }
+ */
+
+         /*var i;
+
+         for(i=0;i<8;i++){
+            // skip 6 num execution
+            if(i==6){
+                continue;
+            
+               // stop execution when ....
+            if(i==4){
+                break;
+            }
+            document.write(i+"<button>for loop</button><br>");
+         }*/
+
+         /*var i=0;
+         while(i<10){
+            document.write(i+"<button>While loop</button> <br>");
+            i++;
+         }*/
+
+         /* var i=0;
+         do{
+            document.write(i+"<button>Do While Loop</button><br>");
+            i++;            
+         }while(i<9) */
+
+
+
+
+        /* function addTwoNumber(){
+             var x=10;
+             var y=40;
+             var z=x+y;
+             document.write(z+"<br>");
+         }
+
+
+         addTwoNumber();
+         addTwoNumber();
+         addTwoNumber();
+         addTwoNumber();*/
+
+
+
+        /* function addTwoNumber(x,y){
+            
+             var z=x+y;
+             document.write(z+"<br>");
+         }
+
+
+         addTwoNumber(2,5);
+         addTwoNumber(10,2);
+         addTwoNumber(10,20);
+         addTwoNumber(3,8);
+
+         
+
+
+
+         function add(n1,n2){
+            return n1+n2;
+         }
+
+         var newValue=add(3,5)+2;
+         document.write(newValue+"<br>");
+
+
+         function name(){
+            return "Hafs";
+             
+         }
+
+         var newValue=name()+'a';
+         document.write(newValue+"<br>");
+
+
+     //array
+          var A=[20,40,23,70,59,]
+          document.write(A[4]+"<br>");
+
+    //array in loop
+
+    var A=[2,7,4,3,7,4,9,6,]
+    var i;
+    for(i=0;i<A.length;i++){
+        document.write(A[i]+"<br>");
+
+    }*/
+
+///// best for array and object( for in loop)
+/* 
+     var A=[8,4,5,30,20,44,76,29,12,43]
+     for(var item in A){
+        document.write(A[item]+"<br>");
+     }
+
+
+      var Person={
+        Name:"Hafsa",
+        Age:26,
+        Email:"samaislam61@gmail.com",
+        City:"Sylhet",
+        Contact:888
+      }
+
+      for(var item in Person){
+        document.write(Person[item]+"<br>");
+
+      }
+
+      var A1=[1,2,3,4,5]
+      var A2=[6,7,8,9,10]
+      var A3=A2.concat(A1)
+      document.write(A3)
+
+      var Name="Hafsa Islam Kaniz";
+      var NameArray=Array.from(Name);
+      document.write(NameArray[12])
+
+  // find datas from array... in condition
+       var numArray=[20,30,40,60,70,90,200,]
+
+       var result=numArray.filter(function(item){
+        return item>50
+       });
+          document.write(result+"<br>");
+
+
+          //find data from array using condition and index no
+
+          var numArray=[40,30,60,35,20,18]
+          var result=numArray.find(function(value){
+            return value>10
+          });
+           document.write(result+"<br>");
+
+           var numArray=[40,30,60,35,20,18]
+          var result=numArray.findIndex(function(value){
+            return value>10
+          });
+           document.write(result+"<br>");
+
+
+           var numArray=[40,30,60,35,20,18]
+             numArray.forEach(function(items){
+                document.write(items+"<br>")
+             });
+
+
+            var numArray=[40,30,60,35,20,18]
+            var result=numArray.includes(10);
+            document.write(result+"<br>");
+
+            var numArray=[40,30,60,35,20,18]
+            var result=numArray.indexOf(10);
+            document.write(result+"<br>");
+
+
+            var numArray=[40,30,60,35,20,18]
+                numArray.reverse()
+
+                document.write(numArray+"<br>")
+
+
+                var numArray=[40,30,60,35,20,18]
+                 numArray.push(10)
+                 numArray.push(10)
+                 numArray.push(10)
+
+                 document.write(numArray+"<br>")
+
+                 var numArray=[40,30,60,35,20,18]
+                 numArray.pop()
+                 numArray.pop()
+                 numArray.pop()
+
+                 document.write(numArray+"<br>")
+                
+                 var numArray=[40,30,60,35,20,18]
+                 numArray.sort().reverse()
+
+                 document.write(numArray+"<br>")
+
+
+                 var numArray=[40,30,60,35,20,18]
+
+                 var result=numArray.slice(1,4)
+                 document.write(result+"<br>");
+
+                 var numArray=[40,30,60,35,20,18]
+
+                 numArray.splice(0,3)
+
+                 document.write(numArray+"<br>")
+                 var numArray=[40,30,60,35,20,18]
+
+                numArray.splice(0,0,2)
+
+                document.write(numArray+"<br>")
+
+
+
+                var country="Bangladesh"
+
+                document.write(
+                     country.charAt(3)
+                
+                )
+
+                var country1="Bangladesh"
+                var country2="pakistan"
+
+                document.write(
+                     country1.concat(country2)
+                
+                )
+
+               /*  
+                var country="Bangladesh"
+
+                document.write(
+                     country.LastIndexOf("a")
+                
+                ); */
+
+                
+
+               /* var country="Bangladesh";
+
+                document.write(
+                     country.replace("desh","-deshi")
+                
+                )
+
+                
+                var country="Bangladesh";
+
+                document.write(
+                     country.substr(0,2)+"<br>"
+                
+                )
+
+
+                var country="Bangladesh";
+
+                document.write(
+                     country.substring(3,10)
+                
+                )
+
+
+                var country="Bangladesh";
+                 document.write(
+                    country.toUpperCase()+"<br>"
+                 )
+
+                 var country="Bangladesh";
+                 document.write(
+                    country.toLowerCase()+"<br>"
+                 )
+
+                 var country="     Bangladesh         ";
+                 var country1=country.trim();
+                 document.write(
+                    country1.length+"<br>"
+                 )
+
+
+                 var obj=new Date()
+                  document.write(
+                    obj.getDate()
+                  )
+
+                  var obj=new Date()
+                  document.write(
+                    obj.getDay()
+                  )
+
+                  var obj=new Date()
+                  document.write(
+                    obj.getTime()
+                  )
+
+                  var obj=new Date()
+                  document.write(
+                    obj.getFullYear()
+                  )
+
+                  var obj=new Date()
+                  document.write(
+                    obj.getFullYear()+"<br>"
+                  )
+                 var num=-6;
+                 document.write(
+                  Math.abs(num)
+                 )
+
+                 var num=6.3;
+                 document.write(
+                  Math.ceil(num)+"<br>"
+                 )
+                 var num=6.7;
+                 document.write(
+                  Math.floor(num)+"<br>"
+                 )
+                 
+
+
+                 var num=6.7;
+                 document.write(
+                  Math.round(num)+"<br>"
+                 )
+                 
+
+                 document.write(
+                  Math.max(20,7,30,60,40,)+"<br>"
+                 )
+                 
+
+
+                 document.write(
+                  Math.min(20,7,30,60,40,)+"<br>"
+                 )
+                 
+                  document.write(
+
+                  Math.random()+"<br>"
+                 )
+
+
+                 var num=7.5;
+                  document.write(
+                     Number.isFinite()
+                  )
+                  var num=7.5;
+                  document.write(
+                     Number.isInteger()
+                  )
+
+                  var num="7.58";
+                  document.write(
+                     Number.parseFloat(num)+"<br>"
+                  )
+                  
+                  var num=7.5;
+                  document.write(
+                     Number.parseInt(num)
+                  )
+                  var num=7.5775352983246324;
+                  document.write(
+                     num.toFixed(3)
+                  )
+                  var num=7.5775352983246324;
+                  document.write(
+                     num.toString()
+                  )
+
+
+
+               
+
+
+                  function ObjAlert(){
+                     alert("success")
+                  }
+
+                  function ObjConfirm(){
+                      let result=confirm("Do you want to delete")
+                      document.write(result);
+                  }
+
+                  function ObjPrompt(){
+                      let result=prompt("write your name")
+                      document.write(result);
+                  }
+
+                  function ObjOpen(){
+                     open()
+                  }
+
+                  function ObjClose(){
+                     close()
+                  }
+
+
+                  setTimeout (function(){
+                     alert("alert after 5 min")
+                  },10000)
+
+
+
+                   var appCodeName=navigator.appCodeName;
+                   var appName=navigator.appName;
+                   var appVersion=navigator.appVersion;
+                   var cookieEnabled=navigator.cookieEnabled;
+                   var language=navigator.language;
+                   var userAgent=navigator.userAgent;
+                   var platform=navigator.platform;
+
+                   document.write(appCodeName+"<br>")
+                   document.write(appName+"<br>")
+                   document.write(appVersion+"<br>")
+                   document.write(cookieEnabled+"<br>")
+                   document.write(language+"<br>")
+                   document.write(userAgent+"<br>")
+                   document.write(platform+"<br>")
+
+
+                   navigator.geolocation.getCurrentPosition( function(Position){
+                      var altitude=position.coords.altitude;
+                      var latitude=position.coords.latitude;
+                      var longitude=position.coords.longitude;
+                      var speed=position.coords.speed;
+
+                      document.write(altitude+"<br>")
+                      document.write(latitude+"<br>")
+                      document.write(longitude+"<br>")
+                      document.write(speed+"<br>")
+                   })
+
+
+                   function MyEvent(msg){
+                     console.log(msg)
+                   }
+*/
+
+
+
+
+
+         async function getMyData(){
+              var url="https://crud.teamrabbil.com/api/vl/ReadProduct";
+              var result=await fetch(url);
+
+              var resObj=await result.json();
+           }      
+                  
+                  
+                  
+
+
+                 
+
+
+
+
+
+
+
+              
+
+
+
+              
+
+              
+              
+
+
+    </script>
+</body>
+</html>
+
